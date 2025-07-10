@@ -27,12 +27,14 @@ _This table will be updated as new branches are added._
    </code>
 
 Open <code>index.html</code> in your browser to view the solution. </br>
-🛠 Tech Stack
 
-HTML
-CSS
-JavaScript (Vanilla)
-📬 Contact
+## 🛠 Tech Stack
+
+- 📝 **HTML5**
+- 🎨 **CSS3**
+- ⚙️ **JavaScript (Vanilla)**
+
+---
 
 ## 📬 Contact
 
