@@ -31,7 +31,7 @@ _This table will be updated as new branches are added._
    <code>git checkout task-01
    </code>
 
-Open index.html in your browser to view the solution.
+Open <code>index.html</code> in your browser to view the solution. </br>
 🛠 Tech Stack
 
 HTML
@@ -39,5 +39,7 @@ CSS
 JavaScript (Vanilla)
 📬 Contact
 
-GitHub: @AlenaB-dev
-LinkedIn: Alena Belokonskaia
+## 📬 Contact
+
+- GitHub: [@AlenaB-dev](https://github.com/AlenaB-dev)
+- LinkedIn: [Alena Belokonskaia](https://www.linkedin.com/in/alena-belokonskaia-b1b8a71a4)
