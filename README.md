@@ -5,14 +5,9 @@ Each **branch** represents a separate challenge and includes a minimal setup wit
 
 ---
 
-## 📂 Branches
+## 📂 Branches overview
 
-| Branch    | Description              |
-| --------- | ------------------------ |
-| `master`  | Navigation page (stub)   |
-| `task-01` | Challenge 01: Timer      |
-| `task-02` | Challenge 02: To-Do List |
-| `task-03` | Challenge 03: ...        |
+For the full list of challenges, see the [TASKS.md](./TASKS.md) file.
 
 _This table will be updated as new branches are added._
 
