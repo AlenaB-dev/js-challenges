@@ -1,41 +1,31 @@
-const tasks = [
-  { number: "01", title: "Sum Numbers" },
-  { number: "02", title: "Const" },
-  { number: "03", title: "Let" },
-  { number: "04", title: "Hoisting" },
-  { number: "05", title: "Ternary Operator" },
-  { number: "06", title: "Arrow Functions" },
-  { number: "07", title: "Default Parameters" },
-  { number: "08", title: "Check Function Parameters" },
-  { number: "09", title: "Object Destructuring" },
-  { number: "10", title: "Destructuring and Rest Operator" },
-  { number: "11", title: "Spread Operator" },
-  { number: "12", title: "Copy Array" },
-  { number: "13", title: "Template Literals" },
-  { number: "14", title: "Object Destructuring" },
-  { number: "15", title: "Iterate Over String" },
-  { number: "16", title: "Swap Variable Values" },
-  { number: "17", title: "IIFE (Immediately Invoked Function Expression)" },
-  { number: "18", title: "Classes" },
-  { number: "19", title: "Iterate Over Object" },
-  { number: "20", title: "Sum Positive and Negative Numbers" },
-];
+/* CHALLANGE 2 - Const
+Answer following Qustions:
+  1. Why no error is generated after the line 14? 
+  2. Why after the line 19 TypeError is generated?
 
-const taskList = document.getElementById("task-list");
+Change one line of code so, that error will go away.
+Don't change lines 14, 19.
+*/
+"use strict";
 
-tasks.forEach((task) => {
-  const li = document.createElement("li");
-  const link = document.createElement("a");
-  link.href = `https://github.com/AlenaB-dev/js-challenges/tree/task-${task.number}`;
-  link.textContent = `Task ${task.number}: ${task.title}`;
-  li.appendChild(link);
-  taskList.appendChild(li);
-});
+// const arr = [1, 2];
+var arr = [1, 2];
 
-// Toggle Theme
-const themeBtn = document.getElementById("theme-toggle");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const dark = document.body.classList.contains("dark");
-  themeBtn.textContent = dark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
+arr.push(3);
+
+console.log(arr);
+// [1, 2, 3]
+
+arr = [1, 2, 3, 4];
+// BEFORE: Uncaught TypeError:
+//   Assignment to constant variable.
+// AFTER: No error
+
+console.log(arr);
+// [1, 2, 3, 4]
+
+/**
+ * 1. Why no error is generated after the line 14? - inspite we can't assign new value to the const< but still can change an array, as array is reference type.
+  
+  2. Why after the line 19 TypeError is generated? - because we can't assign new value to the const, we can't changer pointer, which was assigned using const.
+ */
