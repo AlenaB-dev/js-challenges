@@ -8,6 +8,7 @@ Change code to match output.
 var i = 10;
 
 for (let i = 0; i < 5; i++) {
+  // was var i, changed on let i
   // some stuff
   console.log(i);
 }
