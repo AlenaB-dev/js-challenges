@@ -1,41 +1,35 @@
-const tasks = [
-  { number: "01", title: "Sum Numbers" },
-  { number: "02", title: "Const" },
-  { number: "03", title: "Let" },
-  { number: "04", title: "Hoisting" },
-  { number: "05", title: "Ternary Operator" },
-  { number: "06", title: "Arrow Functions" },
-  { number: "07", title: "Default Parameters" },
-  { number: "08", title: "Check Function Parameters" },
-  { number: "09", title: "Object Destructuring" },
-  { number: "10", title: "Destructuring and Rest Operator" },
-  { number: "11", title: "Spread Operator" },
-  { number: "12", title: "Copy Array" },
-  { number: "13", title: "Template Literals" },
-  { number: "14", title: "Object Destructuring" },
-  { number: "15", title: "Iterate Over String" },
-  { number: "16", title: "Swap Variable Values" },
-  { number: "17", title: "IIFE (Immediately Invoked Function Expression)" },
-  { number: "18", title: "Classes" },
-  { number: "19", title: "Iterate Over Object" },
-  { number: "20", title: "Sum Positive and Negative Numbers" },
-];
+/* CHALLENGE 7 - Default parameters
 
-const taskList = document.getElementById("task-list");
+Answer following question:
+1. Why on the line 14 we can't simply use following statement:
+mult = mult || 2; - Answer: “If mult is falsy (i.e. 0, false, null, undefined, NaN, or ''), use 2.”
 
-tasks.forEach((task) => {
-  const li = document.createElement("li");
-  const link = document.createElement("a");
-  link.href = `https://github.com/AlenaB-dev/js-challenges/tree/task-${task.number}`;
-  link.textContent = `Task ${task.number}: ${task.title}`;
-  li.appendChild(link);
-  taskList.appendChild(li);
-});
+“If mult is not undefined, use it. Otherwise, use 2.”
+So only when the argument mult is missing or explicitly undefined, we substitute the default value 2. That gives us full control over valid values, including falsy ones like 0.
 
-// Toggle Theme
-const themeBtn = document.getElementById("theme-toggle");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const dark = document.body.classList.contains("dark");
-  themeBtn.textContent = dark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
+Set default value of the mult parameter
+in the multiplyBy() function.
+*/
+
+"use strict";
+
+// function multiplyBy(a, mult) {
+//   mult = mult !== undefined ? mult : 2;
+//   console.log(a * mult);
+// }
+
+function multiplyBy(a, mult = 2) {
+  console.log(a * mult);
+}
+
+multiplyBy(2);
+// 4
+
+multiplyBy(2, undefined);
+// 4
+
+multiplyBy(2, 0);
+// 0
+
+multiplyBy(5, 10);
+// 50
