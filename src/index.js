@@ -8,7 +8,15 @@ Create new function and use it as default parameter.
 
 "use strict";
 
-function square(a) {
+// function square(a) {
+//   console.log(a * a);
+// }
+
+function missingArg() {
+  throw new Error("Uncaught Error: Function square requires");
+}
+
+function square(a = missingArg()) {
   console.log(a * a);
 }
 
