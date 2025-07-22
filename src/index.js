@@ -13,8 +13,16 @@ var str = "Today is best day of my life";
 
 // Write code here
 
-for (let i = 0; i < str.length; i++) {
-  if (vowels.includes(str[i])) vowelsCount++;
+// // option 1
+//
+// for (let i = 0; i < str.length; i++) {
+//   if (vowels.includes(str[i])) vowelsCount++;
+// }
+
+// option 2
+
+for (let s of str) {
+  if (vowels.includes(s)) vowelsCount++;
 }
 
 console.log(vowelsCount);
