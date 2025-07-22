@@ -1,41 +1,29 @@
-const tasks = [
-  { number: "01", title: "Sum Numbers" },
-  { number: "02", title: "Const" },
-  { number: "03", title: "Let" },
-  { number: "04", title: "Hoisting" },
-  { number: "05", title: "Ternary Operator" },
-  { number: "06", title: "Arrow Functions" },
-  { number: "07", title: "Default Parameters" },
-  { number: "08", title: "Check Function Parameters" },
-  { number: "09", title: "Object Destructuring" },
-  { number: "10", title: "Destructuring and Rest Operator" },
-  { number: "11", title: "Spread Operator" },
-  { number: "12", title: "Copy Array" },
-  { number: "13", title: "Template Literals" },
-  { number: "14", title: "Object Destructuring" },
-  { number: "15", title: "Iterate Over String" },
-  { number: "16", title: "Swap Variable Values" },
-  { number: "17", title: "IIFE (Immediately Invoked Function Expression)" },
-  { number: "18", title: "Classes" },
-  { number: "19", title: "Iterate Over Object" },
-  { number: "20", title: "Sum Positive and Negative Numbers" },
+/* CHALLENGE 13 - Template Literals
+
+Create carInfo() function that
+will return info about each car.
+
+Car is considered cheap if it's price is <= 20000
+Car is considered expensive it it's price is > 20000
+*/
+
+"use strict";
+
+var cars = [
+  { brand: "Honda", price: 13000 },
+  { brand: "Rolls-Royce", price: 120000 },
 ];
 
-const taskList = document.getElementById("task-list");
+// Write carInfo() function here
 
-tasks.forEach((task) => {
-  const li = document.createElement("li");
-  const link = document.createElement("a");
-  link.href = `https://github.com/AlenaB-dev/js-challenges/tree/task-${task.number}`;
-  link.textContent = `Task ${task.number}: ${task.title}`;
-  li.appendChild(link);
-  taskList.appendChild(li);
-});
+function carInfo(car) {
+  return `Price of my new ${car.brand} is ${car.price}$ and it is 
+  ${car.price <= 20000 ? "cheap" : "expensive"} car.`;
+}
 
-// Toggle Theme
-const themeBtn = document.getElementById("theme-toggle");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const dark = document.body.classList.contains("dark");
-  themeBtn.textContent = dark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
+cars.forEach((car) => console.log(carInfo(car)));
+/* Price of my new Honda is 13000$
+ and it is cheap car. */
+
+/* Price of my new Rolls-Royce
+ is 120000$ and it is expensive car. */
